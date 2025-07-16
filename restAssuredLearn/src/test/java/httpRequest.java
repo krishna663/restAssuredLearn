@@ -24,7 +24,7 @@ public class httpRequest {
     @Test(priority = 2)
     void createUser()
     {
-        HashMap<String,String> hm = new HashMap<String,String>();
+        HashMap<String,String> hm = new HashMap<>();
         hm.put("name","Krish");
         hm.put("job","QA");
 
@@ -45,7 +45,7 @@ public class httpRequest {
     @Test (priority = 3, dependsOnMethods = {"createUser"})
     void updateUser()
     {
-        HashMap<String,String> hm = new HashMap<String,String>();
+        HashMap<String,String> hm = new HashMap<>();
         hm.put("name","Krish");
         hm.put("job","Senior QA");
 
