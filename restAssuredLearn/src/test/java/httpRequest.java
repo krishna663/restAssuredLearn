@@ -62,12 +62,17 @@ public class httpRequest {
                 .log().all();
     }
 
+    @Test(priority = 4)
     void delete()
     {
         given()
+                .header("x-api-key","reqres-free-v1")
 
                 .when()
+                .delete("https://reqres.in/api/users/"+id)
 
                 .then()
+                .statusCode(204)
+                .log().all();
     }
 }
