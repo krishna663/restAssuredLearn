@@ -24,7 +24,7 @@ public class httpRequest {
     @Test(priority = 2)
     void createUser()
     {
-        HashMap<String,String> hm = new HashMap<String,String>();
+        HashMap<String,String> hm = new HashMap<>();
         hm.put("name","Krish");
         hm.put("job","QA");
 
@@ -45,7 +45,7 @@ public class httpRequest {
     @Test (priority = 3, dependsOnMethods = {"createUser"})
     void updateUser()
     {
-        HashMap<String,String> hm = new HashMap<String,String>();
+        HashMap<String,String> hm = new HashMap<>();
         hm.put("name","Krish");
         hm.put("job","Senior QA");
 
@@ -62,12 +62,17 @@ public class httpRequest {
                 .log().all();
     }
 
+    @Test(priority = 4)
     void delete()
     {
         given()
+                .header("x-api-key","reqres-free-v1")
 
                 .when()
+                .delete("https://reqres.in/api/users/"+id)
 
                 .then()
+                .statusCode(204)
+                .log().all();
     }
 }
