@@ -5,7 +5,7 @@ import java.util.HashMap;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.equalTo;
 
-public class httpRequest {
+public class httprequest {
     int id;
 
     @Test(priority = 1)
