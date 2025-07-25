@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Api Chaining">
+    <test name="Api test">
+        <classes>
+            <class name="chaining.CreateUser"/>
+            <class name="chaining.GetUser"/>
+            <class name="chaining.UpdateUser"/>
+            <class name="chaining.DeleteUser"/>
+        </classes>
+    </test>
+</suite>
